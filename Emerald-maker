@@ -1,0 +1,119 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+export default function Portfolio() {
+  const fade = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 text-gray-900 p-6">
+      <div className="max-w-3xl mx-auto space-y-10">
+        {/* HEADER */}
+        <motion.header
+          className="text-center"
+          variants={fade}
+          initial="hidden"
+          animate="show"
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-4xl font-bold">PRAISE</h1>
+          <p className="text-lg mt-2">Freelance Creative Designer</p>
+        </motion.header>
+
+        {/* ABOUT */}
+        <motion.section
+          className="bg-white p-6 rounded-2xl shadow space-y-3"
+          variants={fade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-2xl font-semibold">About Me</h2>
+          <p>
+            I’m Praise, a creative designer focused on clean graphics, smooth
+            video edits, and crisp photo enhancements. I help brands and creators
+            look sharp online — fast delivery and stress-free work.
+          </p>
+        </motion.section>
+
+        {/* SKILLS */}
+        <motion.section
+          className="bg-white p-6 rounded-2xl shadow space-y-4"
+          variants={fade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <h2 className="text-2xl font-semibold">Skills</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Graphic Design (logos, flyers, posters, banners)</li>
+            <li>Photo Editing (retouching, color correction)</li>
+            <li>Video Editing (YouTube, TikTok/Reels, promos)</li>
+          </ul>
+        </motion.section>
+
+        {/* SERVICES */}
+        <motion.section
+          className="bg-white p-6 rounded-2xl shadow space-y-4"
+          variants={fade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+        >
+          <h2 className="text-2xl font-semibold">Services</h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Social media content design</li>
+            <li>Professional photo retouching</li>
+            <li>Short-form video editing</li>
+            <li>YouTube video editing</li>
+            <li>Branding materials</li>
+          </ul>
+        </motion.section>
+
+        {/* PROJECTS */}
+        <motion.section
+          className="bg-white p-6 rounded-2xl shadow space-y-4"
+          variants={fade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <h2 className="text-2xl font-semibold">Projects</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <span className="font-semibold">Social Media Flyer Pack:</span> modern
+              promo flyers for a growing brand.
+            </li>
+            <li>
+              <span className="font-semibold">Portrait Retouch Collection:</span> clean
+              natural portrait edits.
+            </li>
+            <li>
+              <span className="font-semibold">Short Promo Edit:</span> 30-second promo
+              video with smooth transitions.
+            </li>
+          </ul>
+        </motion.section>
+
+        {/* CONTACT */}
+        <motion.section
+          className="bg-white p-6 rounded-2xl shadow space-y-4 text-center"
+          variants={fade}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
+          <h2 className="text-2xl font-semibold">Contact</h2>
+          <p className="text-lg font-medium">WhatsApp: +234 905 096 6224</p>
+        </motion.section>
+      </div>
+    </div>
+  );
+}
